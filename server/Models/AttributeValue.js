@@ -1,11 +1,11 @@
 const mongoose = require('mongoose'); 
-
+const Schema = mongoose.Schema; 
 
 const AttributeValueSchema = new mongoose.Schema(
     {
         Name:{type:String},
         Boolean:{type:Boolean},
-        text:{type:String},
+        Text:{type:String},
         Date:{type:Date}
            
     }

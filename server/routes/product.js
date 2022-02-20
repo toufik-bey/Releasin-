@@ -9,18 +9,24 @@ router.post('/', async(req,res)=>{
 
           const productType = await ProdcutType.findById(req.body.prodcutType); 
 
-          if(!prodcutType){
+          if(!productType){
             return res.status(404).json({msg:'prodcutType not found'})
           }
 
           const product = new Product({
           name:req.body.name, 
-          type:req.body.prodcutType  
+          type:req.body.prodcutType,
+          AssignedAttributes:req.body.AssignedAttributes
           
       }); 
+       
 
       await product.save(); 
   } catch (error) {
     console.error(error.message); 
   }
 });
+
+
+
+module.exports = router;
