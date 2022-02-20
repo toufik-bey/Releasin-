@@ -3,6 +3,7 @@ const mongoose = require('mongoose');
 
 const AttributeValueSchema = new mongoose.Schema(
     {
+        Name:{type:String},
         Boolean:{type:Boolean},
         text:{type:String},
         Date:{type:Date}
@@ -10,4 +11,4 @@ const AttributeValueSchema = new mongoose.Schema(
     }
 );
 
-module.exports=  AttributeValue = mongoose.model('attributeValue', AttributeTypeSchema); 
+module.exports=  AttributeValue = mongoose.model('attributeValue', AttributeValueSchema); 
